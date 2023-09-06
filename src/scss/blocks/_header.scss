@@ -1,0 +1,142 @@
+.header {
+	background-color: $white;
+	position: relative;
+	
+	&__tel {
+		color: $red;
+		font-size: 26px;
+		@media (max-width: 998px) {
+            display: none;
+        }
+	}
+	&__btns {
+		display: flex;
+		align-items: center;
+		column-gap: 20px;
+	}
+	&__search-form {
+		display: flex;
+		align-items: center;
+		column-gap: 20px;
+		@media (max-width: 998px) {
+            display: none;
+        }
+	}
+	&__search-form--mobile {
+		display: none;
+		@media (max-width: 998px) {
+            display: flex;
+			justify-content: center;
+			column-gap: 15px;
+			margin-top: 30px;
+			transform: translateX(10px);
+        }
+	}
+	&__search-input {
+		width: 0px;
+		padding: 0;
+		margin-left: -20px;
+		opacity: 0;
+		@include searchInput;
+		@media (max-width: 998px) {
+            width: 183px;
+			opacity: 1;
+			padding: 10px 15px;
+			margin-left: 0;
+			order: 1;
+        }
+	}
+	&__search-btn-img {
+		width: 27px;
+		height: 27px;
+	}
+	&__account-link-img {
+		width: 30px;
+		height: 30px;
+	}
+	&__btn-pay {
+		width: 176px;
+		height: 44px;
+		border-radius: 7px;
+		font-size: 20px;
+		background-color: $blue;
+		color: $white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 12px 17px;
+		cursor: pointer;
+		&:hover {
+			background-color: $blue-hover;
+		}
+		@media (max-width: 576px) {
+			width: 137px;
+			height: 40px;
+			font-size: 16px;
+			padding: 13px 11px;
+		}
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__row--top {
+		padding: 20px 0 20px 0;
+		@media (max-width: 768px) {
+			padding: 10px 0;
+		}
+	}
+	&__row--menu {
+		display: block;
+		padding: 19px 0 13px 0;
+		background-color: $blue;
+		@media (max-width: 998px) {
+            display: none;
+        }
+	}
+	&__row--mobile {
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: 9;
+		background-color: $white;
+		margin-top: 83px;
+		transition: opacity 0.3s ease-in;
+	}
+	&__socials{
+		@include socials;
+		display: none;
+		@media (max-width: 998px) {
+			margin-top: 30px;
+            display: flex;
+        }
+	}
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	&__img {		
+		img {
+			display: block;
+			width: 208px;
+			height: 31px;
+			object-fit: cover;
+		}
+	}
+	&__img--mobile {
+		@media (max-width: 998px) {
+			img {
+				width: 80px;
+				height: 20px;
+			}
+		}
+	}
+}
+
+.header__search-btn:hover + .header__search-input {
+	display: none;
+}

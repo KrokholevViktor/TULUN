@@ -1,0 +1,51 @@
+.main-slider {
+    position: relative;
+    width: 1236px;
+    margin-top: 40px;
+    .swiper-slide {
+        height: 398px;
+    }
+    &__item {
+        position: relative;
+        background-color: $slider-color;
+        border-radius: 15px;
+       
+        padding-top: 105px;
+        padding-left: 105px;
+    }
+    &__img {
+        position: absolute;
+        right: 140px;
+        bottom: 0;
+        height: 100%;
+        width: 308px;
+        object-fit: cover;
+    }
+    &__title {
+        font-size: 50px;
+        color: $black;
+        line-height: normal;
+    }
+    &__btn {
+        margin-top: 42px;
+        background-color: $blue;
+        color: $white;
+        font-size: 20px;
+        padding: 12px 25px;
+        border-radius: 8px;
+    }
+}
+
+#main-slider .swiper-pagination-bullets {
+    position: absolute;
+    bottom: 40px;
+    left: 106px;
+    z-index: 2;
+    .swiper-pagination-bullet{
+        background-color: white;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: black;
+      }
+}
