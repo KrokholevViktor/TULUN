@@ -16,6 +16,7 @@
     }
     &__item {
         position: relative;
+        padding-bottom: 13px;
         @media (max-width: 998px) {
             display: flex;
             flex-direction: column;
@@ -61,6 +62,7 @@
     }
 
     &__sub-menu {
+        z-index: 2;
         width: 235px;
         display: flex;
         flex-direction: column;
@@ -76,14 +78,14 @@
         background-color: $white;
         border-radius: 10px;
         border: 1px solid $blue;
-        pointer-events: all;
-        transition: all 0.5s;
+        pointer-events: none;
+        transition: all 0.2s;
         &::before {
             position: absolute;
             content: "";
             top: -12px;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, 0%);
             width: 40px;
             height: 52px;
             background-image: url(../../img/header/menu-triangle.svg);
@@ -139,7 +141,7 @@
     }
 }
 
-.menu__item:hover .menu__sub-menu {
+.menu__item:hover > .menu__sub-menu {
     opacity: 1;
     pointer-events: all;
     max-height: 300px;
@@ -149,3 +151,4 @@
         transform: translate(0%, 0%);
     }
 }
+

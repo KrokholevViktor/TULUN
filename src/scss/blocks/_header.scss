@@ -1,7 +1,7 @@
 .header {
 	background-color: $white;
 	position: relative;
-	
+	margin-bottom: 40px;
 	&__tel {
 		color: $red;
 		font-size: 26px;
@@ -89,7 +89,7 @@
 	}
 	&__row--menu {
 		display: block;
-		padding: 19px 0 13px 0;
+		padding: 19px 0 0 0;
 		background-color: $blue;
 		@media (max-width: 998px) {
             display: none;

@@ -1,0 +1,51 @@
+.cards {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 388px);
+        grid-template-rows: 320px;
+        grid-auto-rows: 320px;
+        gap: 36px;
+        margin-bottom: 30px;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px 0px rgba(130, 143, 169, 0.30);
+        padding: 24px 24px 24px 24px;
+    }
+    &__icon {
+        height: 66px;
+        width: 66px;
+        object-fit: cover;
+        margin-bottom: 24px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 26px;
+        color: $blue-hover;
+        margin-bottom: 10px;
+    }
+    &__descr {
+        font-size: 16px;
+        color: $black;
+    }
+    &__link {
+        
+        margin-top: auto;
+        color: $blue-hover;
+        transition: all 0.2s ease-in;
+        &:hover {
+            color: $red;
+            .arrow {
+                margin-left: 7px;
+            }
+        }
+        .arrow {
+            transition: all 0.2s ease-in;
+            margin-left: 10px;
+            transform: translateY(4px);
+        }
+    }
+}
