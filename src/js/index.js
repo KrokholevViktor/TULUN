@@ -5,6 +5,7 @@ import Swiper from 'swiper/bundle';
 // import styles bundle
 import 'swiper/css/bundle';
 
+import mixitup from 'mixitup';
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -14,14 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
          // Optional parameters
         direction: 'horizontal',
-        spaceBetween: 250,
+        spaceBetween: 36,
         parallax: true,
         loop: true,
         speed: 1000,
         // mousewheel: true,
         keyboard: {
             enabled: true,
-
         },
 
         // If we need pagination
@@ -30,4 +30,38 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
     });
+
+    var mixer = mixitup('.tariff__items', {
+        load: {
+            filter: '.landscaping'
+        },
+    });
+
+
+    //Реализация свитчей карточек
+    const cardsSwitchInputs = document.querySelectorAll('.tariff__switch-input');
+    const cards = document.querySelectorAll('.tariff__cards-wrapper');
+
+    cardsSwitchInputs.forEach((input) => {
+        input.addEventListener('click', () => {
+            if(input.checked) {
+                let inputData = input.dataset.switch;
+                cards.forEach((cardSet) => {
+                    if(cardSet.dataset.cards == inputData) {
+                        cardSet.classList.add('tariff__cards-wrapper--active');
+                    }
+                })
+            } else {
+                let inputData = input.dataset.switch;
+                cards.forEach((cardSet) => {
+                    
+                    if(cardSet.dataset.cards == inputData) {
+                        cardSet.classList.remove('tariff__cards-wrapper--active')
+                    }
+                })
+            }
+        })
+    })
+
+
 });

@@ -1,0 +1,129 @@
+.tariff-card {
+    width: 282px;
+    // height: 516px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px 0px rgba(130, 143, 169, 0.30);
+    transition: all 0.2s ease-in;
+    &__header {
+        height: 67px;
+        border-radius: 10px 10px 0px 0px;
+        background-color: $red;
+        padding: 30px 20px 15px 20px;
+        opacity: 1;
+        margin-bottom: 16px;
+    }
+    &__title {
+        font-size: 26px;
+        font-weight: 600;
+        color: $white;
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        padding: 16px 20px 20px 20px;
+    }
+    &__descr {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    &__price {
+        margin-bottom: 13px;
+        display: flex;
+        color: $red;
+        font-size: 36px;
+        font-weight: 600;
+        justify-content: start;
+        align-items: end;
+    }
+    &__currency {
+        margin-left: 10px;
+    }
+    &__period {
+        margin-left: 15px;
+        font-size: 16px;
+        font-weight: 600;
+        color: $blue-hover;
+
+    }
+    &__speed {
+        margin-bottom: 19px;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    &__capability, &__sales {
+        margin-bottom: 30px;
+        padding-left: 24px;
+        li {
+            position: relative;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+    }
+    &__capability-icon {
+        position: absolute;
+        left: -24px;
+        top: 0px;
+        width: 14px;
+        height: 11px;
+    }
+    &__sales {
+        li {
+            &::before {
+                position: absolute;
+                content: '';
+                width: 8px;
+                height: 8px;
+                background-color: $red;
+                border-radius: 50%;
+                left: -24px;
+                top: 4.5px;
+            }
+        }
+    }
+    &__link {
+        margin-bottom: 10px;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $blue;
+        font-size: 20px;
+        transition: all 0.2s ease-in;
+        &:hover {
+            color: $red;
+        }
+    }
+    &__btn {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $blue;
+        border-radius: 8px;
+        color: $white;
+        font-size: 20px;
+        transition: all 0.2s ease-in;
+        &:hover {
+            background-color: $blue-hover;
+        }
+    }
+
+}
+
+.tariff__cards>:nth-child(1) {
+    .tariff-card__header {
+        opacity: 0.4;
+    }
+}
+.tariff__cards>:nth-child(2) {
+    .tariff-card__header {
+        opacity: 0.6;
+    }
+}
+.tariff__cards>:nth-child(3) {
+    .tariff-card__header {
+        opacity: 0.8;
+    }
+}

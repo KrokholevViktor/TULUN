@@ -27,8 +27,9 @@
 		display: flex;
 	}
 	@media (max-width: 576px) {
-		--width: 35px;
+		--width: 32px;
 		--line-height: 3px;
+		--spacing: 8px;
 	}
 }
 

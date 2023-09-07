@@ -1,16 +1,15 @@
 .container {
+	display: block;
 	padding: 0 var(--container-padding);
 	max-width: var(--container-width);
 	margin: 0 auto;
 }
 
 .container--width {
-	max-width: 1280px;
-	padding-left: 18px;
-	padding-right: 18px;
 	margin: 0 auto;
-	overflow-x: hidden;
-
+	max-width: 1272px;
+	padding: 0 18px;
+	// overflow-x: hidden;
 }
 
 .container--nav {

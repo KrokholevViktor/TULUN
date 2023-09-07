@@ -1,28 +1,31 @@
 @font-face {
     font-weight: 400;
-    font-family: "TT Commons Regular";
-    font-family: sans-serif;
-
+    font-family: "TT Commons Regular", sans-serif;
     src: url("../../fonts/TTCommons-Regular.otf");
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-weight: 600;
-    font-family: "TT Commons DemiBold";
-    font-family: sans-serif;
+    font-family: "TT Commons DemiBold", sans-serif;
     src: url("../../fonts/TTCommons-DemiBold.otf");
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-weight: 700;
     font-family: "TT Commons Bold";
-    font-family: sans-serif;
     src: url("../../fonts/TTCommons-Bold.otf");
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-weight: 400;
-    font-family: "Roboto Regular";
-    font-family: sans-serif;
+    font-family: "Roboto Regular", sans-serif;
     src: url("../../fonts/Roboto-Regular.ttf");
+    font-display: swap;
+    font-style: normal;
 }

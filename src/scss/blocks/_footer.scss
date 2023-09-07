@@ -115,6 +115,7 @@
 	&__requisites {
 		color: $pinklink;
 		position: relative;
+		text-decoration: underline;
 		text-underline-offset: 1px;
 		transition: all 0.2s ease-in;
 		&:hover {

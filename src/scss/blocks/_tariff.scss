@@ -1,0 +1,110 @@
+.tariff {
+    margin-bottom: 60px;
+    &__title {
+        display: block;
+        margin: 0 auto;
+        font-size: 40px;
+        color: $blue-hover;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+    &__btn {
+        font-size: 26px;
+        font-weight: 600;
+        opacity: 0.25;
+        color: $blue-hover;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: start;
+        column-gap: 30px;
+        margin-bottom: 35px;
+        .mixitup-control-active {
+            opacity: 1;
+            color: $black;
+            text-decoration: solid underline $red 5px;
+            text-underline-offset: 8px;
+        }
+    }
+    &__switch {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__switch-title {
+        font-size: 26px;
+        font-weight: 600;
+    }
+    &__switch-label {
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 22px;
+        border-radius: 15px;
+        margin-right: 15px;
+    }
+    &__switch-input {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        &:focus + .tariff__switch-slider {
+            box-shadow: 0 0 4px $gray;
+        }
+        &:checked + .tariff__switch-slider::before {
+                background-color: $blue-hover;
+                left: unset;
+                transform: translateX(19px);
+        }
+    }
+    &__switch-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $white;
+        border: 1px solid $gray;
+        border-radius: 15px;
+        transition: all 0.4s;
+        &::before {
+            content: '';
+            position: absolute;
+            cursor: pointer;
+            left: 1px;
+            bottom: 1px;
+            height: 18px;
+            width: 18px;
+            background-color: $gray;
+            border-radius: 50%;
+            transition: all 0.4s;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        column-gap: 36px;
+    }
+
+    &__cards-wrapper {
+        display: block;
+        height: 0px;
+        opacity: 1;
+        margin-bottom: 0;
+        pointer-events: all;
+        .tariff-card {
+            display: none;
+        }
+    }
+    &__cards-wrapper--active {
+        margin-bottom: 80px;
+        height: unset;
+        opacity: 1;
+        pointer-events: all;
+        .tariff-card {
+            display: block;
+        }
+    }
+}

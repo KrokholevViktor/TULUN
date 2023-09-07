@@ -1,17 +1,30 @@
 .main-slider {
     position: relative;
-    width: 1236px;
-    margin-bottom: 40px;
-    .swiper-slide {
-        height: 398px;
+    max-width: 1272px;
+    margin: 0px 0 40px 0;
+    padding: 0 18px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    &__container {
+        display: flex;
+        justify-content: center;
     }
     &__item {
         position: relative;
         background-color: $slider-color;
         border-radius: 15px;
-       
+       overflow-x: hidden;
         padding-top: 105px;
         padding-left: 105px;
+        @media (max-width: 768px) {
+            padding-top: 105px;
+            padding-left: 55px;
+        }
+        @media (max-width: 576px) {
+            padding-top: 184px;
+            padding-left: 20px;
+        }
     }
     &__img {
         position: absolute;
@@ -20,27 +33,65 @@
         height: 100%;
         width: 308px;
         object-fit: cover;
+        @media (max-width: 998px) {
+            right: -70px;
+        }
     }
     &__title {
+        position: relative;
+        z-index: 2;
         font-size: 50px;
         color: $black;
         line-height: normal;
+        max-width: 500px;
+        @media (max-width: 768px) {
+            font-size: 40px;
+            max-width: 300px;
+        }
+        @media (max-width: 576px) {
+            font-size: 24px;
+            max-width: 245px;
+        }
     }
     &__btn {
+        position: relative;
+        z-index: 2;
         margin-top: 42px;
         background-color: $blue;
         color: $white;
         font-size: 20px;
         padding: 12px 25px;
         border-radius: 8px;
+        @media (max-width: 998px) {
+            margin-top: 30px;
+        }
+        @media (max-width: 576px) {
+            margin-top: 20px;
+        }
+    }
+}
+#main-slider {
+    .swiper-slide {
+        height: 398px;
     }
 }
 
 #main-slider .swiper-pagination-bullets {
     position: absolute;
     bottom: 40px;
-    left: 106px;
+    left: 120px;
     z-index: 2;
+    @media (max-width: 768px) {
+        left: 70px;
+    }
+    @media (max-width: 576px) {
+        position: absolute;
+        bottom: 20px;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
     .swiper-pagination-bullet{
         background-color: white;
         opacity: 1;
