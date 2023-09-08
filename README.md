@@ -4,7 +4,7 @@
 
 ### Plagins: Swiper, mixitup
 
-[TULUN - ДЕМО]([https://xxxrepaprika.github.io/LOFT-HOUSE/](https://xxxrepaprika.github.io/TULUN/))
+[TULUN - ДЕМО](https://xxxrepaprika.github.io/TULUN/)
 
 ![Текст описания](docs/img/tulun.jpg)
 
