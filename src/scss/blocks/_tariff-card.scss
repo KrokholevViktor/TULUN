@@ -31,7 +31,7 @@
         display: flex;
         color: $red;
         font-size: 36px;
-        font-weight: 600;
+        font-weight: 700;
         justify-content: start;
         align-items: end;
     }
@@ -41,13 +41,13 @@
     &__period {
         margin-left: 15px;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 700;
         color: $blue-hover;
 
     }
     &__speed {
         margin-bottom: 19px;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 18px;
     }
     &__capability, &__sales {

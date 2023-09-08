@@ -19,6 +19,7 @@ function header() {
 		}
 	})
 
+
 	//Разворачивает сворачивает поле input формы search
 	const searchForm = document.querySelector('.header__search-form'),
 		  searchInput = document.querySelector('.header__search-input');
@@ -30,6 +31,24 @@ function header() {
 		searchInput.style.cssText = `width: 0; opacity: 0; padding: 0; margin-left: -20px;`;
 	});
 	
+
+	//реализация hover эффекта для мобилок и планшетов в меню
+	const menuLinks = document.querySelectorAll('.menu__link');
+
+	menuLinks.forEach((item) => {
+		item.addEventListener('touchstart', (e) => {
+			if (item) {
+				
+				if (item.parentNode.childNodes.length > 3 && !item.parentNode.classList.contains('hover')) {
+					e.preventDefault();
+					item.parentNode.classList.add('hover');
+				} else if (item.parentNode.childNodes.length > 3) {
+					e.preventDefault();
+					item.parentNode.classList.remove('hover');
+				}
+			} 
+		});
+	});
 }
 
 export default header;

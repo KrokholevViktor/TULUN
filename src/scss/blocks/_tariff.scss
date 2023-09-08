@@ -1,37 +1,84 @@
 .tariff {
     margin-bottom: 60px;
-    &__title {
-        display: block;
-        margin: 0 auto;
-        font-size: 40px;
-        color: $blue-hover;
-        margin-top: 60px;
-        margin-bottom: 20px;
-        font-weight: 600;
-        text-align: center;
+    
+    ::-webkit-scrollbar:horizontal {
+        height: 8px;
+        
     }
+    
+    ::-webkit-scrollbar-track {
+        background-color: $gray;
+        border-radius: 8px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 8px;
+        border: 2px solid $gray;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(102, 102, 102);
+        
+    }
+
+    &__content {
+        position: relative;
+    }
+
     &__btn {
         font-size: 26px;
-        font-weight: 600;
+        font-weight: 700;
         opacity: 0.25;
         color: $blue-hover;
+        white-space: nowrap;
     }
     &__buttons {
         display: flex;
-        justify-content: start;
+        justify-content: center;
         column-gap: 30px;
-        margin-bottom: 35px;
+        width: calc(100% - 36px);
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+        
+        
         .mixitup-control-active {
             opacity: 1;
             color: $black;
             text-decoration: solid underline $red 5px;
             text-underline-offset: 8px;
         }
+        @media (max-width: 741px) {
+            justify-content: start;
+            overflow-x: scroll;
+            padding-bottom: 15px;
+
+            
+        }
+        
     }
     &__switch {
+        
+        @media (max-width: 1246px) {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(1, 912px);
+        }
+        @media (max-width: 940px) {
+            grid-template-columns: repeat(1, 612px);
+        }
+        @media (max-width: 646px) {
+            grid-template-columns: repeat(1,282px);
+            
+        }
+    }
+    &__switch-item {
         display: flex;
         align-items: center;
         margin-bottom: 30px;
+        justify-content: start;
     }
     &__switch-title {
         font-size: 26px;
@@ -40,7 +87,7 @@
     &__switch-label {
         display: inline-block;
         position: relative;
-        width: 40px;
+        min-width: 40px;
         height: 22px;
         border-radius: 15px;
         margin-right: 15px;
@@ -84,8 +131,20 @@
     }
 
     &__cards {
-        display: flex;
-        column-gap: 36px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(250px, 282px));
+        gap: 36px;
+        justify-content: center;
+        @media (max-width: 1246px) {
+            grid-template-columns: repeat(3, minmax(250px, 282px));
+        }
+        @media (max-width: 940px) {
+            grid-template-columns: repeat(2, minmax(250px, 282px));
+        }
+        @media (max-width: 646px) {
+            grid-template-columns: repeat(1,282px);
+            
+        }
     }
 
     &__cards-wrapper {

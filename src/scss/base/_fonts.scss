@@ -1,31 +1,30 @@
 @font-face {
+    font-family: 'TTCommons';
+    font-style: normal;
     font-weight: 400;
-    font-family: "TT Commons Regular", sans-serif;
-    src: url("../../fonts/TTCommons-Regular.otf");
-    font-display: swap;
-    font-style: normal;
-}
-
-@font-face {
-    font-weight: 600;
-    font-family: "TT Commons DemiBold", sans-serif;
-    src: url("../../fonts/TTCommons-DemiBold.otf");
-    font-display: swap;
-    font-style: normal;
-}
-
-@font-face {
-    font-weight: 700;
-    font-family: "TT Commons Bold";
-    src: url("../../fonts/TTCommons-Bold.otf");
-    font-display: swap;
-    font-style: normal;
-}
+    src: url('../fonts/TTCommons-Regular.woff') format('woff'), /* IE6-IE8 */
+         url('../fonts/TTCommons-Regular.woff2') format('woff2');/* Super Modern Browsers */
+  }
+  
+  @font-face {
+      font-family: 'TTCommons';
+      font-style: normal;
+      font-weight: 600;
+      src: url('../fonts/TTCommons-Medium.woff') format('woff'), /* IE6-IE8 */
+           url('../fonts/TTCommons-Medium.woff2') format('woff2');/* Super Modern Browsers */
+    }
+    @font-face {
+       font-family: 'TTCommons';
+       font-style: normal;
+       font-weight: 700;
+       src: url('../fonts/TTCommons-Bold.woff') format('woff'), /* IE6-IE8 */
+     }
 
 @font-face {
     font-weight: 400;
     font-family: "Roboto Regular", sans-serif;
-    src: url("../../fonts/Roboto-Regular.ttf");
+    src: url("../fonts/Roboto-Regular.ttf");
     font-display: swap;
     font-style: normal;
 }
+
