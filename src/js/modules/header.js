@@ -35,10 +35,22 @@ function header() {
 	//реализация hover эффекта для мобилок и планшетов в меню
 	const menuLinks = document.querySelectorAll('.menu__link');
 
+	function hideSubMenu () {
+		menuLinks.forEach((item) => {
+			item.parentNode.classList.remove('hover');
+		})
+	}
+	
+
 	menuLinks.forEach((item) => {
-		item.addEventListener('touchstart', (e) => {
+
+		item.addEventListener('touchstart', (e) => { // При таче удаляет класс hover у всех блоков ссылок
+			hideSubMenu();
+		})
+
+		item.addEventListener('touchend', (e) => { // Добавляет класс hover на блок ссылки если блок имеет подменю и не имеет класс hover
+			
 			if (item) {
-				
 				if (item.parentNode.childNodes.length > 3 && !item.parentNode.classList.contains('hover')) {
 					e.preventDefault();
 					item.parentNode.classList.add('hover');
@@ -49,6 +61,40 @@ function header() {
 			} 
 		});
 	});
+
+	document.addEventListener('click', function (e) {
+		if (!e.target.classList.contains('menu__sub-menu')) { // Скрыть подменю при клике по документу мимо подменю
+			hideSubMenu();
+		  }
+	  });
+
+	window.addEventListener('orientationchange', () => { // Скрыть подменю при изменении ориентации
+		hideSubMenu();
+	})
+
+
+	// функциональность фиксирования шапки при прямом и обратном скролле
+	
+	const headerMain = document.querySelector('.header');
+	let lastScrollTop = 0;
+
+
+	window.addEventListener('scroll', function() {
+		hideSubMenu();
+		let currentScrollTop = window.pageXOffset || document.documentElement.scrollTop;
+
+		if (currentScrollTop > lastScrollTop  || currentScrollTop == 0) {
+			//прямой скролл
+			headerMain.classList.remove('header--fixed');
+			document.body.style.marginTop = `0px`;
+		} else if (document.documentElement.scrollTop > 400){
+			// обратный скролл
+			headerMain.classList.add('header--fixed');
+			document.body.style.marginTop = `${headerMain.offsetHeight + 40}px`;
+		};
+
+		lastScrollTop = currentScrollTop;
+	})
 }
 
 export default header;

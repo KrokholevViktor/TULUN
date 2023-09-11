@@ -24,26 +24,16 @@
             align-items: center;
         }
     }
-    &__item:first-of-type {
+    &__item:first-of-type { // стили для первого подменю без ховера (смещение)
         .menu__sub-menu {
             @media (max-width: 1200px) {
-                transform: translate(-20%, 5%) !important;
+                transform: translate(-20%, 5%) ;
                 &::before {
                         left: 20%;
                 }
             }
             @media (max-width: 998px) {
-                transform: translate(0%, 0%) !important;
-            }
-        }
-    }
-    &__item:first-of-type:hover {
-        .menu__sub-menu {
-            @media (max-width: 1200px) {
-                transform: translate(-20%, 0%) !important;
-            }
-            @media (max-width: 998px) {
-                transform: translate(0%, 0%) !important;
+                transform: translate(0%, 0%);
             }
         }
     }
@@ -81,6 +71,9 @@
         pointer-events: none;
         transition: all 0.2s;
         filter: drop-shadow(0px 10px 20px rgba(130, 143, 169, 0.30));
+        @media (max-width: 998px) {
+            filter: unset;
+        }
         &::before {
             position: absolute;
             content: "";
@@ -96,10 +89,7 @@
                 left: 50%;
             }
         }
-        @media (max-width: 1260px) {
-            width: 180px;
-            row-gap: 16px;
-        }
+
         @media (max-width: 998px) {
             text-align: center;
             display: block;
@@ -131,13 +121,11 @@
         &:hover {
             color: $red;
         }
-        @media (max-width: 1200px) {
-            font-size: 18px;
-        }
         @media (max-width: 998px) {
             display: block;
             color: $blue-hover;
             margin-bottom: 10px;
+            font-size: 18px;
         }
     }
 }
@@ -153,6 +141,18 @@
     }
 }
 
+.menu__item:first-of-type:hover > .menu__sub-menu, .menu__item:first-of-type.hover > .menu__sub-menu {
+    // transform: translate(-50%, 0%);
+    @media (max-width: 1200px) {
+        transform: translate(-20%, 0%) !important;
+    }
+    @media (max-width: 998px) {
+        transform: translate(0%, 0%) !important;
+    }
+}
+
 .menu__item.hover > .menu__sub-menu {
-    filter: unset;
+    @media (max-width: 998px) {
+        filter: unset;
+    }
 }

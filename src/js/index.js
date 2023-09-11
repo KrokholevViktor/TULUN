@@ -1,4 +1,5 @@
 import header from './modules/header.js';
+import modal from './modules/modal.js';
 // import Swiper bundle with all modules installed
 import Swiper from 'swiper/bundle';
 
@@ -10,6 +11,7 @@ import mixitup from 'mixitup';
 
 document.addEventListener('DOMContentLoaded', function () {
     header();
+    modal();
     // init Swiper:
     const swiper = new Swiper( '.main-slider', {
 

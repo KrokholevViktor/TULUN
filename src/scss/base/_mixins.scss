@@ -33,6 +33,17 @@
         }
 }
 
+@mixin btnStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue;
+    border-radius: 8px;
+    padding: 14px 30px;
+    color: $white;
+    font-size: 20px;
+}
+
 ::-webkit-scrollbar {
 	width: 10px;
 }
