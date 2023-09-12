@@ -11,12 +11,12 @@
 		<header class="header">
     <div class="container--width">
         <div class="header__row header__row--top">
-            <a href="index.html" class="logo">
+            <div class="logo">
                 <picture class="logo__img logo__img--mobile">
                     <source media="(max-width:998px)" srcset="img/header/header-mobile-logo.svg">
                     <img  src="img/header/header-logo.svg" alt="logo">
                 </picture>
-            </a>
+            </div>
             <div class="header__btns">
                 <a class="header__tel" href="tel:+79501000979">+7 (950) 1000-979</a>
                 <form class="header__search-form" role="search" method="get" id="search-form">
@@ -42,16 +42,16 @@
                     <a href="#" class="menu__link">Услуги</a>
                     <ul class="menu__sub-menu ">
                         <li class="menu__sub-item">
-                            <a href="services.html" class="menu__sub-link">Физическим лицам</a>
+                            <a href="#" class="menu__sub-link">Физическим лицам</a>
                         </li>
                         <li class="menu__sub-item">
-                            <a href="services.html" class="menu__sub-link">Юридическим лицам</a>
+                            <a href="#" class="menu__sub-link">Юридическим лицам</a>
                         </li>
                         <li class="menu__sub-item">
-                            <a href="services.html" class="menu__sub-link">Благоустройкам</a>
+                            <a href="#" class="menu__sub-link">Благоустройкам</a>
                         </li>
                         <li class="menu__sub-item">
-                            <a href="services.html" class="menu__sub-link">Частным домам</a>
+                            <a href="#" class="menu__sub-link">Частным домам</a>
                         </li>
                     </ul>
                 </li>
@@ -150,36 +150,36 @@
 		</div>
 		
 		<div class="container--width">
-			<div class="home-btns">
-				<div class="home-btns__wrapper">
-					<button class="home-btns__item">
-						<a class="home-btns__link" href="#">
-							<img class="home-btns__icon" src="img/icons/ttk.svg" alt="image">
-							<h3 class="home-btns__item-title">
+			<div class="services">
+				<div class="services__wrapper">
+					<button class="services__item">
+						<a class="services__link" href="#">
+							<img class="services__icon" src="img/icons/ttk.svg" alt="image">
+							<h3 class="services__item-title">
 								Подключиться <br> к Тулун-ТелеКом
 							</h3>
 						</a>
 					</button>
-					<button class="home-btns__item">
-						<a class="home-btns__link" href="#">
-							<img class="home-btns__icon" src="img/icons/pay.svg" alt="image">
-							<h3 class="home-btns__item-title">
+					<button class="services__item">
+						<a class="services__link" href="#">
+							<img class="services__icon" src="img/icons/pay.svg" alt="image">
+							<h3 class="services__item-title">
 								Экспресс-оплата <br> услуг
 							</h3>
 						</a>
 					</button>
-					<button class="home-btns__item">
-						<a class="home-btns__link" href="#">
-							<img class="home-btns__icon" src="img/icons/support.svg" alt="image">
-							<h3 class="home-btns__item-title">
+					<button class="services__item">
+						<a class="services__link" href="#">
+							<img class="services__icon" src="img/icons/support.svg" alt="image">
+							<h3 class="services__item-title">
 								Техническая <br> поддержка
 							</h3>
 						</a>
 					</button>
-					<button class="home-btns__item">
-						<a class="home-btns__link" href="#">
-							<img class="home-btns__icon" src="img/icons/support.svg" alt="image">
-							<h3 class="home-btns__item-title">
+					<button class="services__item">
+						<a class="services__link" href="#">
+							<img class="services__icon" src="img/icons/support.svg" alt="image">
+							<h3 class="services__item-title">
 								Техническая <br> поддержка
 							</h3>
 						</a>
@@ -228,7 +228,6 @@
 		</div>
 
 			<!-- Блок Тарифы и Услуги -->
-
 			<div class="tariff">
 				<h2 class="tariff__title title">Услуги и тарифы</h2>
 				<div class="tariff__buttons">
@@ -241,21 +240,21 @@
 					<div class="tariff__inner">
 						<!-- враппер для всех карточек и свитчей -->
 						<div class="tariff__items">
-	<!-- первая вкладка -->	<div class="tariff__content mix landscaping">
-								<!-- первый свитч landscaping-->
+		<!-- первый свитч -->
+							<div class="tariff__content">
 								<div class="tariff__switch">
 									<div class="tariff__switch-item">
 										<label class="tariff__switch-label">
-											<input class="tariff__switch-input" type="checkbox" data-switch="landscaping-internet">
+											<input class="tariff__switch-input" type="checkbox" data-switch="internet" checked="true">
 											<span class="tariff__switch-slider"></span>
 										</label>
 										<div class="tariff__switch-title">Интернет</div>
 									</div>
 								</div>
-								<div class="tariff__cards-wrapper" data-cards="landscaping-internet">
-	
-									<!-- начало обёртки -->
-									<div class="tariff__cards"> 
+			
+								<div class="tariff__cards-wrapper tariff__cards-wrapper--active" data-cards="internet">
+									<!-- враппер для контента -->
+									<div class="tariff__cards mix landscaping"> 
 										<!-- Карточка -->
 										<div class="tariff-card">
 											<div class="tariff-card__header">
@@ -290,7 +289,7 @@
 													</li>
 												</ul>
 			
-												<a href="constructor.html" class="tariff-card__link">
+												<a href="" class="tariff-card__link">
 													Настроить тариф
 												</a>
 												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
@@ -330,8 +329,175 @@
 													Неограниченные звонки
 												</li>
 											</ul>
-		
-											<a href="constructor.html" class="tariff-card__link">
+			
+											<a href="" class="tariff-card__link">
+												Настроить тариф
+											</a>
+											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</button>
+										</div>
+									</div>
+									<!-- конец карточки -->
+									<!-- Карточка -->
+									<div class="tariff-card">
+										<div class="tariff-card__header">
+											<h5 class="tariff-card__title">Безлимит 15</h5>
+										</div>
+										<div class="tariff-card__inner">
+											<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+											<div class="tariff-card__conditions">
+												<div class="tariff-card__price">
+													300
+													<p class="tariff-card__currency">₽</p>
+													<p class="tariff-card__period">в месяц</p>
+												</div>
+												<div class="tariff-card__speed">15 Мбит/сек</div>
+											</div>
+											<ul class="tariff-card__capability">
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Ночное ускорение до 30 Мб/с
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Без ограничений по трафику
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Неограниченные звонки
+												</li>
+											</ul>
+											<ul class="tariff-card__sales">
+												<li>
+													Скидка для семьи
+												<li>
+													Неограниченные звонки
+												</li>
+											</ul>
+			
+											<a href="" class="tariff-card__link">
+												Настроить тариф
+											</a>
+											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</button>
+										</div>
+									</div>
+									<!-- конец карточки -->
+									<!-- Карточка -->
+									<div class="tariff-card">
+										<div class="tariff-card__header">
+											<h5 class="tariff-card__title">Безлимит 15</h5>
+										</div>
+										<div class="tariff-card__inner">
+											<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+											<div class="tariff-card__conditions">
+												<div class="tariff-card__price">
+													300
+													<p class="tariff-card__currency">₽</p>
+													<p class="tariff-card__period">в месяц</p>
+												</div>
+												<div class="tariff-card__speed">15 Мбит/сек</div>
+											</div>
+											<ul class="tariff-card__capability">
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Ночное ускорение до 30 Мб/с
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Без ограничений по трафику
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Неограниченные звонки
+												</li>
+											</ul>
+											<ul class="tariff-card__sales">
+												<li>
+													Скидка для семьи
+												<li>
+													Неограниченные звонки
+												</li>
+											</ul>
+			
+											<a href="" class="tariff-card__link">
+												Настроить тариф
+											</a>
+											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</button>
+										</div>
+									</div>
+									<!-- конец карточки -->
+									</div>
+									<!-- конец обёртки -->
+									<div class="tariff__cards mix private">
+										<!-- Карточка -->
+										<div class="tariff-card">
+											<div class="tariff-card__header">
+												<h5 class="tariff-card__title">Безлимит 15</h5>
+											</div>
+											<div class="tariff-card__inner">
+												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+												<div class="tariff-card__conditions">
+													<div class="tariff-card__price">
+														300
+														<p class="tariff-card__currency">₽</p>
+														<p class="tariff-card__period">в месяц</p>
+													</div>
+													<div class="tariff-card__speed">15 Мбит/сек</div>
+												</div>
+												<ul class="tariff-card__capability">
+													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+														Ночное ускорение до 30 Мб/с
+													</li>
+													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+														Без ограничений по трафику
+													</li>
+													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+														Неограниченные звонки
+													</li>
+												</ul>
+												<ul class="tariff-card__sales">
+													<li>
+														Скидка для семьи
+													<li>
+														Неограниченные звонки
+													</li>
+												</ul>
+			
+												<a href="" class="tariff-card__link">
+													Настроить тариф
+												</a>
+												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
+											</div>
+										</div>
+									<!-- конец карточки -->
+									<!-- Карточка -->
+									<div class="tariff-card">
+										<div class="tariff-card__header">
+											<h5 class="tariff-card__title">Безлимит 15</h5>
+										</div>
+										<div class="tariff-card__inner">
+											<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+											<div class="tariff-card__conditions">
+												<div class="tariff-card__price">
+													300
+													<p class="tariff-card__currency">₽</p>
+													<p class="tariff-card__period">в месяц</p>
+												</div>
+												<div class="tariff-card__speed">15 Мбит/сек</div>
+											</div>
+											<ul class="tariff-card__capability">
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Ночное ускорение до 30 Мб/с
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Без ограничений по трафику
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Неограниченные звонки
+												</li>
+											</ul>
+											<ul class="tariff-card__sales">
+												<li>
+													Скидка для семьи
+												<li>
+													Неограниченные звонки
+												</li>
+											</ul>
+			
+											<a href="" class="tariff-card__link">
 												Настроить тариф
 											</a>
 											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
@@ -339,22 +505,7 @@
 									</div>
 								<!-- конец карточки -->
 									</div>
-									<!-- конец обёртки -->
-								</div>
-
-								<!-- второй свитч landscaping-->
-								<div class="tariff__switch">
-									<div class="tariff__switch-item">
-										<label class="tariff__switch-label">
-											<input class="tariff__switch-input" type="checkbox" data-switch="landscaping-television">
-											<span class="tariff__switch-slider"></span>
-										</label>
-										<div class="tariff__switch-title">Телевидение</div>
-									</div>
-								</div>
-								<div class="tariff__cards-wrapper" data-cards="landscaping-television">
-									<!-- начало обёртки -->
-									<div class="tariff__cards"> 
+									<div class="tariff__cards mix juridical">
 										<!-- Карточка -->
 										<div class="tariff-card">
 											<div class="tariff-card__header">
@@ -389,231 +540,197 @@
 													</li>
 												</ul>
 			
-												<a href="constructor.html" class="tariff-card__link">
+												<a href="" class="tariff-card__link">
 													Настроить тариф
 												</a>
 												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
 											</div>
 										</div>
 									<!-- конец карточки -->
-									</div>
-									<!-- конец обёртки -->
-								</div>
-	
-								<!-- третий свитч landscaping-->
-								<div class="tariff__switch">
-									<div class="tariff__switch-item">
-										<label class="tariff__switch-label">
-											<input class="tariff__switch-input" type="checkbox" data-switch="landscaping-videoviewer">
-											<span class="tariff__switch-slider"></span>
-										</label>
-										<div class="tariff__switch-title">Облачное IP-видеонаблюдение</div>
-									</div>
-								</div>
-								<div class="tariff__cards-wrapper" data-cards="landscaping-videoviewer">
-									<!-- начало обёртки -->
-									<div class="tariff__cards"> 
-										<!-- Карточка -->
-										<div class="tariff-card">
-											<div class="tariff-card__header">
-												<h5 class="tariff-card__title">Безлимит 15</h5>
-											</div>
-											<div class="tariff-card__inner">
-												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
-												<div class="tariff-card__conditions">
-													<div class="tariff-card__price">
-														300
-														<p class="tariff-card__currency">₽</p>
-														<p class="tariff-card__period">в месяц</p>
-													</div>
-													<div class="tariff-card__speed">15 Мбит/сек</div>
-												</div>
-												<ul class="tariff-card__capability">
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Ночное ускорение до 30 Мб/с
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Без ограничений по трафику
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Неограниченные звонки
-													</li>
-												</ul>
-												<ul class="tariff-card__sales">
-													<li>
-														Скидка для семьи
-													<li>
-														Неограниченные звонки
-													</li>
-												</ul>
-			
-												<a href="constructor.html" class="tariff-card__link">
-													Настроить тариф
-												</a>
-												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
-											</div>
+									<!-- Карточка -->
+									<div class="tariff-card">
+										<div class="tariff-card__header">
+											<h5 class="tariff-card__title">Безлимит 15</h5>
 										</div>
-										<!-- конец карточки -->
-										<!-- Карточка -->
-										<div class="tariff-card">
-											<div class="tariff-card__header">
-												<h5 class="tariff-card__title">Безлимит 15</h5>
-											</div>
-											<div class="tariff-card__inner">
-												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
-												<div class="tariff-card__conditions">
-													<div class="tariff-card__price">
-														300
-														<p class="tariff-card__currency">₽</p>
-														<p class="tariff-card__period">в месяц</p>
-													</div>
-													<div class="tariff-card__speed">15 Мбит/сек</div>
+										<div class="tariff-card__inner">
+											<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+											<div class="tariff-card__conditions">
+												<div class="tariff-card__price">
+													300
+													<p class="tariff-card__currency">₽</p>
+													<p class="tariff-card__period">в месяц</p>
 												</div>
-												<ul class="tariff-card__capability">
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Ночное ускорение до 30 Мб/с
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Без ограничений по трафику
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Неограниченные звонки
-													</li>
-												</ul>
-												<ul class="tariff-card__sales">
-													<li>
-														Скидка для семьи
-													<li>
-														Неограниченные звонки
-													</li>
-												</ul>
+												<div class="tariff-card__speed">15 Мбит/сек</div>
+											</div>
+											<ul class="tariff-card__capability">
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Ночное ускорение до 30 Мб/с
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Без ограничений по трафику
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Неограниченные звонки
+												</li>
+											</ul>
+											<ul class="tariff-card__sales">
+												<li>
+													Скидка для семьи
+												<li>
+													Неограниченные звонки
+												</li>
+											</ul>
 			
-												<a href="constructor.html" class="tariff-card__link">
-													Настроить тариф
-												</a>
-												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
-											</div>
+											<a href="" class="tariff-card__link">
+												Настроить тариф
+											</a>
+											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
 										</div>
-										<!-- конец карточки -->
-										<!-- Карточка -->
-										<div class="tariff-card">
-											<div class="tariff-card__header">
-												<h5 class="tariff-card__title">Безлимит 15</h5>
-											</div>
-											<div class="tariff-card__inner">
-												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
-												<div class="tariff-card__conditions">
-													<div class="tariff-card__price">
-														300
-														<p class="tariff-card__currency">₽</p>
-														<p class="tariff-card__period">в месяц</p>
-													</div>
-													<div class="tariff-card__speed">15 Мбит/сек</div>
-												</div>
-												<ul class="tariff-card__capability">
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Ночное ускорение до 30 Мб/с
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Без ограничений по трафику
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Неограниченные звонки
-													</li>
-												</ul>
-												<ul class="tariff-card__sales">
-													<li>
-														Скидка для семьи
-													<li>
-														Неограниченные звонки
-													</li>
-												</ul>
-			
-												<a href="constructor.html" class="tariff-card__link">
-													Настроить тариф
-												</a>
-												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
-											</div>
-										</div>
-									<!-- конец карточки -->
 									</div>
-									<!-- конец обёртки -->
+								<!-- конец карточки -->
+									</div>
 								</div>
 							</div>
-	
-	<!-- вторая вкладка --><div class="tariff__content mix private">
-								<!-- первый свитч private-->
+		<!-- второй свитч --><div class="tariff__content">
 								<div class="tariff__switch">
 									<div class="tariff__switch-item">
 										<label class="tariff__switch-label">
-											<input class="tariff__switch-input" type="checkbox" data-switch="private-internet">
-											<span class="tariff__switch-slider"></span>
-										</label>
-										<div class="tariff__switch-title">Интернет</div>
-									</div>
-								</div>
-								<div class="tariff__cards-wrapper" data-cards="private-internet">
-	
-									<!-- начало обёртки -->
-									<div class="tariff__cards"> 
-										<!-- Карточка -->
-										<div class="tariff-card">
-											<div class="tariff-card__header">
-												<h5 class="tariff-card__title">Безлимит 15</h5>
-											</div>
-											<div class="tariff-card__inner">
-												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
-												<div class="tariff-card__conditions">
-													<div class="tariff-card__price">
-														300
-														<p class="tariff-card__currency">₽</p>
-														<p class="tariff-card__period">в месяц</p>
-													</div>
-													<div class="tariff-card__speed">15 Мбит/сек</div>
-												</div>
-												<ul class="tariff-card__capability">
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Ночное ускорение до 30 Мб/с
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Без ограничений по трафику
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Неограниченные звонки
-													</li>
-												</ul>
-												<ul class="tariff-card__sales">
-													<li>
-														Скидка для семьи
-													<li>
-														Неограниченные звонки
-													</li>
-												</ul>
-			
-												<a href="constructor.html" class="tariff-card__link">
-													Настроить тариф
-												</a>
-												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
-											</div>
-										</div>
-									<!-- конец карточки -->
-									</div>
-									<!-- конец обёртки -->
-								</div>
-	
-								<!-- второй свитч private-->
-								<div class="tariff__switch">
-									<div class="tariff__switch-item">
-										<label class="tariff__switch-label">
-											<input class="tariff__switch-input" type="checkbox" data-switch="private-television">
+											<input class="tariff__switch-input" type="checkbox" data-switch="television">
 											<span class="tariff__switch-slider"></span>
 										</label>
 										<div class="tariff__switch-title">Телевидение</div>
 									</div>
 								</div>
-								<div class="tariff__cards-wrapper" data-cards="private-television">
-									<!-- начало обёртки -->
-									<div class="tariff__cards"> 
+			
+								<div class="tariff__cards-wrapper" data-cards="television">
+									<!-- враппер для контента -->
+									<div class="tariff__cards mix landscaping"> 
+									<!-- Карточка -->
+									<div class="tariff-card">
+										<div class="tariff-card__header">
+											<h5 class="tariff-card__title">Безлимит 15</h5>
+										</div>
+										<div class="tariff-card__inner">
+											<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+											<div class="tariff-card__conditions">
+												<div class="tariff-card__price">
+													300
+													<p class="tariff-card__currency">₽</p>
+													<p class="tariff-card__period">в месяц</p>
+												</div>
+												<div class="tariff-card__speed">15 Мбит/сек</div>
+											</div>
+											<ul class="tariff-card__capability">
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Ночное ускорение до 30 Мб/с
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Без ограничений по трафику
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Неограниченные звонки
+												</li>
+											</ul>
+											<ul class="tariff-card__sales">
+												<li>
+													Скидка для семьи
+												<li>
+													Неограниченные звонки
+												</li>
+											</ul>
+			
+											<a href="" class="tariff-card__link">
+												Настроить тариф
+											</a>
+											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</button>
+										</div>
+									</div>
+									<!-- конец карточки -->
+									<!-- Карточка -->
+									<div class="tariff-card">
+										<div class="tariff-card__header">
+											<h5 class="tariff-card__title">Безлимит 15</h5>
+										</div>
+										<div class="tariff-card__inner">
+											<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+											<div class="tariff-card__conditions">
+												<div class="tariff-card__price">
+													300
+													<p class="tariff-card__currency">₽</p>
+													<p class="tariff-card__period">в месяц</p>
+												</div>
+												<div class="tariff-card__speed">15 Мбит/сек</div>
+											</div>
+											<ul class="tariff-card__capability">
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Ночное ускорение до 30 Мб/с
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Без ограничений по трафику
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Неограниченные звонки
+												</li>
+											</ul>
+											<ul class="tariff-card__sales">
+												<li>
+													Скидка для семьи
+												<li>
+													Неограниченные звонки
+												</li>
+											</ul>
+			
+											<a href="" class="tariff-card__link">
+												Настроить тариф
+											</a>
+											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</button>
+										</div>
+									</div>
+									<!-- конец карточки -->
+									<!-- Карточка -->
+									<div class="tariff-card">
+										<div class="tariff-card__header">
+											<h5 class="tariff-card__title">Безлимит 15</h5>
+										</div>
+										<div class="tariff-card__inner">
+											<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+											<div class="tariff-card__conditions">
+												<div class="tariff-card__price">
+													300
+													<p class="tariff-card__currency">₽</p>
+													<p class="tariff-card__period">в месяц</p>
+												</div>
+												<div class="tariff-card__speed">15 Мбит/сек</div>
+											</div>
+											<ul class="tariff-card__capability">
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Ночное ускорение до 30 Мб/с
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Без ограничений по трафику
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Неограниченные звонки
+												</li>
+											</ul>
+											<ul class="tariff-card__sales">
+												<li>
+													Скидка для семьи
+												<li>
+													Неограниченные звонки
+												</li>
+											</ul>
+			
+											<a href="" class="tariff-card__link">
+												Настроить тариф
+											</a>
+											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</button>
+										</div>
+									</div>
+									<!-- конец карточки -->
+									</div>
+									<!-- конец обёртки -->
+									<div class="tariff__cards mix private">
 										<!-- Карточка -->
 										<div class="tariff-card">
 											<div class="tariff-card__header">
@@ -648,7 +765,214 @@
 													</li>
 												</ul>
 			
-												<a href="constructor.html" class="tariff-card__link">
+												<a href="" class="tariff-card__link">
+													Настроить тариф
+												</a>
+												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
+											</div>
+										</div>
+									<!-- конец карточки -->
+									<!-- Карточка -->
+									<div class="tariff-card">
+										<div class="tariff-card__header">
+											<h5 class="tariff-card__title">Безлимит 15</h5>
+										</div>
+										<div class="tariff-card__inner">
+											<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+											<div class="tariff-card__conditions">
+												<div class="tariff-card__price">
+													300
+													<p class="tariff-card__currency">₽</p>
+													<p class="tariff-card__period">в месяц</p>
+												</div>
+												<div class="tariff-card__speed">15 Мбит/сек</div>
+											</div>
+											<ul class="tariff-card__capability">
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Ночное ускорение до 30 Мб/с
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Без ограничений по трафику
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Неограниченные звонки
+												</li>
+											</ul>
+											<ul class="tariff-card__sales">
+												<li>
+													Скидка для семьи
+												<li>
+													Неограниченные звонки
+												</li>
+											</ul>
+			
+											<a href="" class="tariff-card__link">
+												Настроить тариф
+											</a>
+											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
+										</div>
+									</div>
+								<!-- конец карточки -->
+									<!-- Карточка -->
+									<div class="tariff-card">
+										<div class="tariff-card__header">
+											<h5 class="tariff-card__title">Безлимит 15</h5>
+										</div>
+										<div class="tariff-card__inner">
+											<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+											<div class="tariff-card__conditions">
+												<div class="tariff-card__price">
+													300
+													<p class="tariff-card__currency">₽</p>
+													<p class="tariff-card__period">в месяц</p>
+												</div>
+												<div class="tariff-card__speed">15 Мбит/сек</div>
+											</div>
+											<ul class="tariff-card__capability">
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Ночное ускорение до 30 Мб/с
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Без ограничений по трафику
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Неограниченные звонки
+												</li>
+											</ul>
+											<ul class="tariff-card__sales">
+												<li>
+													Скидка для семьи
+												<li>
+													Неограниченные звонки
+												</li>
+											</ul>
+			
+											<a href="" class="tariff-card__link">
+												Настроить тариф
+											</a>
+											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
+										</div>
+									</div>
+									<!-- конец карточки -->
+									</div>
+									<div class="tariff__cards mix juridical">
+										<!-- Карточка -->
+										<div class="tariff-card">
+											<div class="tariff-card__header">
+												<h5 class="tariff-card__title">Безлимит 15</h5>
+											</div>
+											<div class="tariff-card__inner">
+												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+												<div class="tariff-card__conditions">
+													<div class="tariff-card__price">
+														300
+														<p class="tariff-card__currency">₽</p>
+														<p class="tariff-card__period">в месяц</p>
+													</div>
+													<div class="tariff-card__speed">15 Мбит/сек</div>
+												</div>
+												<ul class="tariff-card__capability">
+													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+														Ночное ускорение до 30 Мб/с
+													</li>
+													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+														Без ограничений по трафику
+													</li>
+													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+														Неограниченные звонки
+													</li>
+												</ul>
+												<ul class="tariff-card__sales">
+													<li>
+														Скидка для семьи
+													<li>
+														Неограниченные звонки
+													</li>
+												</ul>
+			
+												<a href="" class="tariff-card__link">
+													Настроить тариф
+												</a>
+												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
+											</div>
+										</div>
+									<!-- конец карточки -->
+									<!-- Карточка -->
+									<div class="tariff-card">
+										<div class="tariff-card__header">
+											<h5 class="tariff-card__title">Безлимит 15</h5>
+										</div>
+										<div class="tariff-card__inner">
+											<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+											<div class="tariff-card__conditions">
+												<div class="tariff-card__price">
+													300
+													<p class="tariff-card__currency">₽</p>
+													<p class="tariff-card__period">в месяц</p>
+												</div>
+												<div class="tariff-card__speed">15 Мбит/сек</div>
+											</div>
+											<ul class="tariff-card__capability">
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Ночное ускорение до 30 Мб/с
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Без ограничений по трафику
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Неограниченные звонки
+												</li>
+											</ul>
+											<ul class="tariff-card__sales">
+												<li>
+													Скидка для семьи
+												<li>
+													Неограниченные звонки
+												</li>
+											</ul>
+			
+											<a href="" class="tariff-card__link">
+												Настроить тариф
+											</a>
+											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
+										</div>
+									</div>
+								<!-- конец карточки -->
+										<!-- Карточка -->
+										<div class="tariff-card">
+											<div class="tariff-card__header">
+												<h5 class="tariff-card__title">Безлимит 15</h5>
+											</div>
+											<div class="tariff-card__inner">
+												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+												<div class="tariff-card__conditions">
+													<div class="tariff-card__price">
+														300
+														<p class="tariff-card__currency">₽</p>
+														<p class="tariff-card__period">в месяц</p>
+													</div>
+													<div class="tariff-card__speed">15 Мбит/сек</div>
+												</div>
+												<ul class="tariff-card__capability">
+													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+														Ночное ускорение до 30 Мб/с
+													</li>
+													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+														Без ограничений по трафику
+													</li>
+													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+														Неограниченные звонки
+													</li>
+												</ul>
+												<ul class="tariff-card__sales">
+													<li>
+														Скидка для семьи
+													<li>
+														Неограниченные звонки
+													</li>
+												</ul>
+			
+												<a href="" class="tariff-card__link">
 													Настроить тариф
 												</a>
 												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
@@ -656,408 +980,197 @@
 										</div>
 									<!-- конец карточки -->
 									</div>
-									<!-- конец обёртки -->
-								</div>
-	
-								<!-- третий свитч private-->
-								<div class="tariff__switch">
-									<div class="tariff__switch-item">
-										<label class="tariff__switch-label">
-											<input class="tariff__switch-input" type="checkbox" data-switch="private-videoviewer">
-											<span class="tariff__switch-slider"></span>
-										</label>
-										<div class="tariff__switch-title">Облачное IP-видеонаблюдение</div>
-									</div>
-								</div>
-								<div class="tariff__cards-wrapper" data-cards="private-videoviewer">
-									<!-- начало обёртки -->
-									<div class="tariff__cards"> 
-										<!-- Карточка -->
-										<div class="tariff-card">
-											<div class="tariff-card__header">
-												<h5 class="tariff-card__title">Безлимит 15</h5>
-											</div>
-											<div class="tariff-card__inner">
-												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
-												<div class="tariff-card__conditions">
-													<div class="tariff-card__price">
-														300
-														<p class="tariff-card__currency">₽</p>
-														<p class="tariff-card__period">в месяц</p>
-													</div>
-													<div class="tariff-card__speed">15 Мбит/сек</div>
-												</div>
-												<ul class="tariff-card__capability">
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Ночное ускорение до 30 Мб/с
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Без ограничений по трафику
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Неограниченные звонки
-													</li>
-												</ul>
-												<ul class="tariff-card__sales">
-													<li>
-														Скидка для семьи
-													<li>
-														Неограниченные звонки
-													</li>
-												</ul>
-			
-												<a href="constructor.html" class="tariff-card__link">
-													Настроить тариф
-												</a>
-												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
-											</div>
-										</div>
-										<!-- конец карточки -->
-										<!-- Карточка -->
-										<div class="tariff-card">
-											<div class="tariff-card__header">
-												<h5 class="tariff-card__title">Безлимит 15</h5>
-											</div>
-											<div class="tariff-card__inner">
-												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
-												<div class="tariff-card__conditions">
-													<div class="tariff-card__price">
-														300
-														<p class="tariff-card__currency">₽</p>
-														<p class="tariff-card__period">в месяц</p>
-													</div>
-													<div class="tariff-card__speed">15 Мбит/сек</div>
-												</div>
-												<ul class="tariff-card__capability">
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Ночное ускорение до 30 Мб/с
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Без ограничений по трафику
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Неограниченные звонки
-													</li>
-												</ul>
-												<ul class="tariff-card__sales">
-													<li>
-														Скидка для семьи
-													<li>
-														Неограниченные звонки
-													</li>
-												</ul>
-			
-												<a href="constructor.html" class="tariff-card__link">
-													Настроить тариф
-												</a>
-												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
-											</div>
-										</div>
-										<!-- конец карточки -->
-									</div>
-									<!-- конец обёртки -->
 								</div>
 							</div>
-	<!-- третья вкладка --><div class="tariff__content mix juridical">
-								<!-- первый свитч juridical-->
+		<!-- третий свитч --><div class="tariff__content">
 								<div class="tariff__switch">
 									<div class="tariff__switch-item">
 										<label class="tariff__switch-label">
-											<input class="tariff__switch-input" type="checkbox" data-switch="juridical-internet">
-											<span class="tariff__switch-slider"></span>
-										</label>
-										<div class="tariff__switch-title">Интернет</div>
-									</div>
-								</div>
-								<div class="tariff__cards-wrapper" data-cards="juridical-internet">
-	
-									<!-- начало обёртки -->
-									<div class="tariff__cards"> 
-										<!-- Карточка -->
-										<div class="tariff-card">
-											<div class="tariff-card__header">
-												<h5 class="tariff-card__title">Безлимит 15</h5>
-											</div>
-											<div class="tariff-card__inner">
-												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
-												<div class="tariff-card__conditions">
-													<div class="tariff-card__price">
-														300
-														<p class="tariff-card__currency">₽</p>
-														<p class="tariff-card__period">в месяц</p>
-													</div>
-													<div class="tariff-card__speed">15 Мбит/сек</div>
-												</div>
-												<ul class="tariff-card__capability">
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Ночное ускорение до 30 Мб/с
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Без ограничений по трафику
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Неограниченные звонки
-													</li>
-												</ul>
-												<ul class="tariff-card__sales">
-													<li>
-														Скидка для семьи
-													<li>
-														Неограниченные звонки
-													</li>
-												</ul>
-			
-												<a href="constructor.html" class="tariff-card__link">
-													Настроить тариф
-												</a>
-												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
-											</div>
-										</div>
-										<!-- конец карточки -->
-										<!-- Карточка -->
-										<div class="tariff-card">
-											<div class="tariff-card__header">
-												<h5 class="tariff-card__title">Безлимит 15</h5>
-											</div>
-											<div class="tariff-card__inner">
-												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
-												<div class="tariff-card__conditions">
-													<div class="tariff-card__price">
-														300
-														<p class="tariff-card__currency">₽</p>
-														<p class="tariff-card__period">в месяц</p>
-													</div>
-													<div class="tariff-card__speed">15 Мбит/сек</div>
-												</div>
-												<ul class="tariff-card__capability">
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Ночное ускорение до 30 Мб/с
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Без ограничений по трафику
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Неограниченные звонки
-													</li>
-												</ul>
-												<ul class="tariff-card__sales">
-													<li>
-														Скидка для семьи
-													<li>
-														Неограниченные звонки
-													</li>
-												</ul>
-			
-												<a href="constructor.html" class="tariff-card__link">
-													Настроить тариф
-												</a>
-												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
-											</div>
-										</div>
-										<!-- конец карточки -->
-									</div>
-									<!-- конец обёртки -->
-								</div>
-	
-								<!-- второй свитч juridical-->
-								<div class="tariff__switch">
-									<div class="tariff__switch-item">
-										<label class="tariff__switch-label">
-											<input class="tariff__switch-input" type="checkbox" data-switch="juridical-television">
-											<span class="tariff__switch-slider"></span>
-										</label>
-										<div class="tariff__switch-title">Телевидение</div>
-									</div>
-								</div>
-								<div class="tariff__cards-wrapper" data-cards="juridical-television">
-									<!-- начало обёртки -->
-									<div class="tariff__cards"> 
-										<!-- Карточка -->
-										<div class="tariff-card">
-											<div class="tariff-card__header">
-												<h5 class="tariff-card__title">Безлимит 15</h5>
-											</div>
-											<div class="tariff-card__inner">
-												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
-												<div class="tariff-card__conditions">
-													<div class="tariff-card__price">
-														300
-														<p class="tariff-card__currency">₽</p>
-														<p class="tariff-card__period">в месяц</p>
-													</div>
-													<div class="tariff-card__speed">15 Мбит/сек</div>
-												</div>
-												<ul class="tariff-card__capability">
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Ночное ускорение до 30 Мб/с
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Без ограничений по трафику
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Неограниченные звонки
-													</li>
-												</ul>
-												<ul class="tariff-card__sales">
-													<li>
-														Скидка для семьи
-													<li>
-														Неограниченные звонки
-													</li>
-												</ul>
-			
-												<a href="constructor.html" class="tariff-card__link">
-													Настроить тариф
-												</a>
-												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
-											</div>
-										</div>
-										<!-- конец карточки -->
-									</div>
-									<!-- конец обёртки -->
-								</div>
-	
-								<!-- третий свитч juridical-->
-								<div class="tariff__switch">
-									<div class="tariff__switch-item">
-										<label class="tariff__switch-label">
-											<input class="tariff__switch-input" type="checkbox" data-switch="juridical-videoviewer">
+											<input class="tariff__switch-input" type="checkbox" data-switch="videoviewer">
 											<span class="tariff__switch-slider"></span>
 										</label>
 										<div class="tariff__switch-title">Облачное IP-видеонаблюдение</div>
 									</div>
 								</div>
-								<div class="tariff__cards-wrapper" data-cards="juridical-videoviewer">
-									<!-- начало обёртки -->
-									<div class="tariff__cards"> 
-										<!-- Карточка -->
-										<div class="tariff-card">
-											<div class="tariff-card__header">
-												<h5 class="tariff-card__title">Безлимит 15</h5>
-											</div>
-											<div class="tariff-card__inner">
-												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
-												<div class="tariff-card__conditions">
-													<div class="tariff-card__price">
-														300
-														<p class="tariff-card__currency">₽</p>
-														<p class="tariff-card__period">в месяц</p>
-													</div>
-													<div class="tariff-card__speed">15 Мбит/сек</div>
-												</div>
-												<ul class="tariff-card__capability">
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Ночное ускорение до 30 Мб/с
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Без ограничений по трафику
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Неограниченные звонки
-													</li>
-												</ul>
-												<ul class="tariff-card__sales">
-													<li>
-														Скидка для семьи
-													<li>
-														Неограниченные звонки
-													</li>
-												</ul>
 			
-												<a href="constructor.html" class="tariff-card__link">
-													Настроить тариф
-												</a>
-												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
-											</div>
+								<div class="tariff__cards-wrapper" data-cards="videoviewer">
+									<!-- враппер для контента -->
+									<div class="tariff__cards mix landscaping"> 
+										
+									<!-- Карточка -->
+									<div class="tariff-card">
+										<div class="tariff-card__header">
+											<h5 class="tariff-card__title">Безлимит 15</h5>
 										</div>
-										<!-- конец карточки -->
-										<!-- Карточка -->
-										<div class="tariff-card">
-											<div class="tariff-card__header">
-												<h5 class="tariff-card__title">Безлимит 15</h5>
-											</div>
-											<div class="tariff-card__inner">
-												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
-												<div class="tariff-card__conditions">
-													<div class="tariff-card__price">
-														300
-														<p class="tariff-card__currency">₽</p>
-														<p class="tariff-card__period">в месяц</p>
-													</div>
-													<div class="tariff-card__speed">15 Мбит/сек</div>
+										<div class="tariff-card__inner">
+											<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+											<div class="tariff-card__conditions">
+												<div class="tariff-card__price">
+													300
+													<p class="tariff-card__currency">₽</p>
+													<p class="tariff-card__period">в месяц</p>
 												</div>
-												<ul class="tariff-card__capability">
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Ночное ускорение до 30 Мб/с
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Без ограничений по трафику
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Неограниченные звонки
-													</li>
-												</ul>
-												<ul class="tariff-card__sales">
-													<li>
-														Скидка для семьи
-													<li>
-														Неограниченные звонки
-													</li>
-												</ul>
+												<div class="tariff-card__speed">15 Мбит/сек</div>
+											</div>
+											<ul class="tariff-card__capability">
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Ночное ускорение до 30 Мб/с
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Без ограничений по трафику
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Неограниченные звонки
+												</li>
+											</ul>
+											<ul class="tariff-card__sales">
+												<li>
+													Скидка для семьи
+												<li>
+													Неограниченные звонки
+												</li>
+											</ul>
 			
-												<a href="constructor.html" class="tariff-card__link">
-													Настроить тариф
-												</a>
-												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
-											</div>
+											<a href="" class="tariff-card__link">
+												Настроить тариф
+											</a>
+											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</button>
 										</div>
-										<!-- конец карточки -->
-										<!-- Карточка -->
-										<div class="tariff-card">
-											<div class="tariff-card__header">
-												<h5 class="tariff-card__title">Безлимит 15</h5>
-											</div>
-											<div class="tariff-card__inner">
-												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
-												<div class="tariff-card__conditions">
-													<div class="tariff-card__price">
-														300
-														<p class="tariff-card__currency">₽</p>
-														<p class="tariff-card__period">в месяц</p>
-													</div>
-													<div class="tariff-card__speed">15 Мбит/сек</div>
+									</div>
+									<!-- конец карточки -->
+									<!-- Карточка -->
+									<div class="tariff-card">
+										<div class="tariff-card__header">
+											<h5 class="tariff-card__title">Безлимит 15</h5>
+										</div>
+										<div class="tariff-card__inner">
+											<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+											<div class="tariff-card__conditions">
+												<div class="tariff-card__price">
+													300
+													<p class="tariff-card__currency">₽</p>
+													<p class="tariff-card__period">в месяц</p>
 												</div>
-												<ul class="tariff-card__capability">
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Ночное ускорение до 30 Мб/с
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Без ограничений по трафику
-													</li>
-													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
-														Неограниченные звонки
-													</li>
-												</ul>
-												<ul class="tariff-card__sales">
-													<li>
-														Скидка для семьи
-													<li>
-														Неограниченные звонки
-													</li>
-												</ul>
-			
-												<a href="constructor.html" class="tariff-card__link">
-													Настроить тариф
-												</a>
-												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
+												<div class="tariff-card__speed">15 Мбит/сек</div>
 											</div>
+											<ul class="tariff-card__capability">
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Ночное ускорение до 30 Мб/с
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Без ограничений по трафику
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Неограниченные звонки
+												</li>
+											</ul>
+											<ul class="tariff-card__sales">
+												<li>
+													Скидка для семьи
+												<li>
+													Неограниченные звонки
+												</li>
+											</ul>
+			
+											<a href="" class="tariff-card__link">
+												Настроить тариф
+											</a>
+											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</button>
 										</div>
-										<!-- конец карточки -->
+									</div>
+									<!-- конец карточки -->
 									</div>
 									<!-- конец обёртки -->
+									<div class="tariff__cards mix private">
+									<!-- Карточка -->
+									<div class="tariff-card">
+										<div class="tariff-card__header">
+											<h5 class="tariff-card__title">Безлимит 15</h5>
+										</div>
+										<div class="tariff-card__inner">
+											<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+											<div class="tariff-card__conditions">
+												<div class="tariff-card__price">
+													300
+													<p class="tariff-card__currency">₽</p>
+													<p class="tariff-card__period">в месяц</p>
+												</div>
+												<div class="tariff-card__speed">15 Мбит/сек</div>
+											</div>
+											<ul class="tariff-card__capability">
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Ночное ускорение до 30 Мб/с
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Без ограничений по трафику
+												</li>
+												<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+													Неограниченные звонки
+												</li>
+											</ul>
+											<ul class="tariff-card__sales">
+												<li>
+													Скидка для семьи
+												<li>
+													Неограниченные звонки
+												</li>
+											</ul>
+			
+											<a href="" class="tariff-card__link">
+												Настроить тариф
+											</a>
+											<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
+										</div>
+									</div>
+									<!-- конец карточки -->
+									</div>
+									<div class="tariff__cards mix juridical">
+										<!-- Карточка -->
+										<div class="tariff-card">
+											<div class="tariff-card__header">
+												<h5 class="tariff-card__title">Безлимит 15</h5>
+											</div>
+											<div class="tariff-card__inner">
+												<p class="tariff-card__descr">Интернет на скорости 15 Мбит/сек по цене</p>
+												<div class="tariff-card__conditions">
+													<div class="tariff-card__price">
+														300
+														<p class="tariff-card__currency">₽</p>
+														<p class="tariff-card__period">в месяц</p>
+													</div>
+													<div class="tariff-card__speed">15 Мбит/сек</div>
+												</div>
+												<ul class="tariff-card__capability">
+													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+														Ночное ускорение до 30 Мб/с
+													</li>
+													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+														Без ограничений по трафику
+													</li>
+													<li><img class="tariff-card__capability-icon" src="img/icons/tariff-card-icon.svg" alt="icon">
+														Неограниченные звонки
+													</li>
+												</ul>
+												<ul class="tariff-card__sales">
+													<li>
+														Скидка для семьи
+													<li>
+														Неограниченные звонки
+													</li>
+												</ul>
+			
+												<a href="" class="tariff-card__link">
+													Настроить тариф
+												</a>
+												<button class="tariff-card__btn" data-modalbtn="true">Оставить заявку</a></button>
+											</div>
+										</div>
+									<!-- конец карточки -->
+									</div>
 								</div>
 							</div>
 						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -1132,72 +1245,68 @@
 					</div>
 					<a class="news__more-link" href="#">Читать все новости<img class="arrow" src="img/icons/arrow.svg" alt="icon"></a>
 				</div>
-				<div class="ask-section">
-    <div class="container--width">
-        <div class="ask">
-            <div class="ask__title ">Ответим на любой вопрос!</div>
-            <form class="ask__form">
-                <input class="ask__form-input" type="text" placeholder="+7 (___) ___-__-__">
-                <button class="ask__form-button" type="submit">оставить заявку</button>
-            </form>
-            <div class="ask__checkbox">
-                <input class="ask__input-checkbox" id="ask-checkbox" name="ask-checkbox" type="checkbox">
-                <label class="ask__label-checkbox" for="ask-checkbox">
-                    Согласен(на) на обработку своих персональных данных
-                </label>
-            </div>
-        </div>
+				<div class="ask">
+    <div class="ask__title ">Ответим на любой вопрос!</div>
+
+    <form class="ask__form">
+        <input class="ask__form-input" type="text" placeholder="+7 (___) ___-__-__">
+        <button class="ask__form-button" type="submit">оставить заявку</button>
+    </form>
+    <div class="ask__checkbox">
+        <input class="ask__input-checkbox" id="ask-checkbox" name="ask-checkbox" type="checkbox">
+        <label class="ask__label-checkbox" for="ask-checkbox">
+            Согласен(на) на обработку своих персональных данных
+        </label>
     </div>
 </div>
 
 			</div>
 		
-		<div class="modal" id="modal">
-    <div class="modal__form">
-        <div class="title modal__form-title">Свяжитесь с нами</div>
-        <label class="modal__form-label" for="name">
-            Имя*
-            <input class="modal__form-input" name="text" type="text" placeholder="Ваше имя">
-        </label>
-        <label class="modal__form-label" for="email">
-            Электронная почта
-            <input class="modal__form-input" name="email" type="email" placeholder="email@domain.zone">
-        </label>
-        <label class="modal__form-label" for="phone">
-            Телефон*
-            <input class="modal__form-input" name="phone" type="phone" placeholder="+7 (___) ___-__-__">
-        </label>
+			<div class="modal" id="modal">
+				<div class="modal__form">
+					<div class="title modal__form-title">Свяжитесь с нами</div>
+					<label class="modal__form-label" for="name">
+						Имя*
+						<input class="modal__form-input" name="text" type="text" placeholder="Ваше имя">
+					</label>
+					<label class="modal__form-label" for="email">
+						Электронная почта
+						<input class="modal__form-input" name="email" type="email" placeholder="email@domain.zone">
+					</label>
+					<label class="modal__form-label" for="phone">
+						Телефон*
+						<input class="modal__form-input" name="phone" type="phone" placeholder="+7 (___) ___-__-__">
+					</label>
 
-        <div class="modal__radio-container">
-            <input class="modal__radio-input" type="radio" name="type-building" value="В квартиру" checked="true" id="val1">
-            <label class="modal__radio-label" for="val1">В квартиру</label>
+					<div class="modal__radio-container">
+						<input class="modal__radio-input" type="radio" name="type-building" value="В квартиру" checked="true" id="val1">
+						<label class="modal__radio-label" for="val1">В квартиру</label>
 
-            <input class="modal__radio-input" type="radio" name="type-building" value="В офис" id="val2">
-            <label class="modal__radio-label" for="val2">В офис</label>
+						<input class="modal__radio-input" type="radio" name="type-building" value="В офис" id="val2">
+						<label class="modal__radio-label" for="val2">В офис</label>
 
-            <input class="modal__radio-input" type="radio" name="type-building" value="В частный дом" id="val3">
-            <label class="modal__radio-label" for="val3">В частный дом</label>
-        </div>
-        
-        <label class="modal__form-label" for="address">
-            Адрес*
-            <input class="modal__form-input" name="address" type="text" placeholder="Адрес">
-        </label>
+						<input class="modal__radio-input" type="radio" name="type-building" value="В частный дом" id="val3">
+						<label class="modal__radio-label" for="val3">В частный дом</label>
+					</div>
+					
+					<label class="modal__form-label" for="address">
+						Адрес*
+						<input class="modal__form-input" name="address" type="text" placeholder="Адрес">
+					</label>
 
-        <label class="modal__form-label" for="textarea">
-            Комментарий
-            <textarea class="modal__form-textarea" name="textarea" id="" placeholder="Ваш комментарий"></textarea>
-        </label>
+					<label class="modal__form-label" for="textarea">
+						Комментарий
+						<textarea class="modal__form-textarea" name="textarea" id="" placeholder="Ваш комментарий"></textarea>
+					</label>
 
-        <label class="modal__form-label modal__form-label--checkbox" for="checkbox">
-            <input class="modal__form-input--checkbox" name="checkbox" type="checkbox">
-            Согласен(на) на обработку своих персональных данных
-        </label>
-        
-        <button class="modal__form-btn">Отправить</button>
-    </div>
-</div>
-
+					<label class="modal__form-label modal__form-label--checkbox" for="checkbox">
+						<input class="modal__form-input--checkbox" name="checkbox" type="checkbox">
+						Согласен(на) на обработку своих персональных данных
+					</label>
+					
+					<button class="modal__form-btn">Отправить</button>
+				</div>
+			</div>
 
 		
 

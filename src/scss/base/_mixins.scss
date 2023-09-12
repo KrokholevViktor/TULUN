@@ -44,6 +44,53 @@
     font-size: 20px;
 }
 
+///style for tarif cards and services Page
+
+@mixin cardsWrapperStyle {
+    display: grid;
+        grid-template-columns: repeat(4, minmax(250px, 282px));
+        gap: 36px;
+        justify-content: center;
+        @media (max-width: 1246px) {
+            grid-template-columns: repeat(3, minmax(250px, 282px));
+        }
+        @media (max-width: 940px) {
+            grid-template-columns: repeat(2, minmax(250px, 282px));
+        }
+        @media (max-width: 646px) {
+            grid-template-columns: repeat(1,282px);
+            
+        }
+}
+
+@mixin cardsBtnStyle {
+    display: flex;
+        justify-content: center;
+        column-gap: 30px;
+        width: calc(100% - 36px);
+        margin: 0 auto;
+        margin-bottom: 20px;
+        .mixitup-control-active {
+            opacity: 1;
+            color: $black;
+            text-decoration: solid underline $red 5px;
+            text-underline-offset: 8px;
+        }
+        @media (max-width: 741px) {
+            justify-content: start;
+            overflow-x: auto;
+            padding-bottom: 15px;
+        }
+}
+
+@mixin cardControlBtnStyle {
+    font-size: 26px;
+    font-weight: 700;
+    opacity: 0.25;
+    color: $blue-hover;
+    white-space: nowrap;
+}
+
 ::-webkit-scrollbar {
 	width: 10px;
 }

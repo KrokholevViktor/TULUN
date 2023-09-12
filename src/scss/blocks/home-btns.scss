@@ -1,15 +1,15 @@
-.cards {
+.home-btns {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center; 
+    
     &__wrapper {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, minmax(250px, 388px));
-        grid-template-rows: 320px;
-        grid-auto-rows: 320px;
         gap: 36px;
-        margin-bottom: 30px;
+        // justify-content: center;
+        margin-bottom: 40px;
         @media (max-width: 1140px) {
             grid-template-columns: repeat(2, minmax(340px, 388px));
         }
@@ -20,49 +20,32 @@
             grid-template-columns: repeat(1, 335px);
         }
     }
-    &__item{
+    &__link {
         display: flex;
-        flex-direction: column;
-        background-color: $white;
+        align-items: start;
+       
+    } 
+    &__item {
+        padding: 31px 31px 25px 25px;
+        background-color: $services;
         border-radius: 10px;
         box-shadow: 0px 10px 20px 0px rgba(130, 143, 169, 0.30);
-        padding: 24px 24px 24px 24px;
         transition: all 0.2s ease-in;
         &:hover {
             transform: scale(1.02);
             box-shadow: 0px 10px 20px 0px rgba(130, 143, 169, 0.60);
          }
     }
-    &__icon {
-        height: 66px;
-        width: 66px;
-        object-fit: cover;
-        margin-bottom: 24px;
-    }
-    &__title {
-        font-weight: 600;
-        font-size: 26px;
+    &__item-title {
+        text-align: left;
+        margin-left: 14px;
+        font-size: 24px;
         color: $blue-hover;
-        margin-bottom: 10px;
-    }
-    &__descr {
-        font-size: 16px;
-        color: $black;
-    }
-    &__link {
-        @include detailsLink;
-    }
-    &__application {
-        margin-bottom: 40px;
-        background-color: $blue;
-        color: $white;
-        width: 175px;
-        height: 48px;
-        padding: 14px 30px 12px 30px;
-        border-radius: 10px;
+        font-weight: 600;
+        // max-width: 250px;
         transition: all 0.2s ease-in;
         &:hover {
-            background-color: $blue-hover;
+            color: $red;
         }
     }
 }

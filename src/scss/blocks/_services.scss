@@ -1,44 +1,14 @@
 .services {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    &__wrapper {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, minmax(250px, 388px));
-        gap: 36px;
-        // justify-content: center;
-        margin-bottom: 40px;
-        @media (max-width: 1140px) {
-            grid-template-columns: repeat(2, minmax(340px, 388px));
-        }
-        @media (max-width: 778px) {
-            grid-template-columns: repeat(auto-fit, minmax(340px, 388px));
-        }
-        @media (max-width: 576px) {
-            grid-template-columns: repeat(1, 335px);
-        }
+    &__items {
+        margin-bottom: 60px;
     }
-    &__link {
-        display: flex;
-        align-items: start;
-        padding: 31px 31px 25px 25px;
-        background-color: $services;
-        box-shadow: 0px 10px 20px 0px rgba(130, 143, 169, 0.30);
-        border-radius: 10px;
-    } 
-    &__item {
+    &__controls {
+        @include cardsBtnStyle;
     }
-    &__item-title {
-        text-align: left;
-        margin-left: 14px;
-        font-size: 24px;
-        color: $blue-hover;
-        font-weight: 600;
-        // max-width: 250px;
-        transition: all 0.2s ease-in;
-        &:hover {
-            color: $red;
-        }
+    &__control-btn {
+        @include cardControlBtnStyle;
+    }
+    &__items-wrapper {
+        @include cardsWrapperStyle;
     }
 }

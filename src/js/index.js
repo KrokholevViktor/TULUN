@@ -1,5 +1,6 @@
 import header from './modules/header.js';
 import modal from './modules/modal.js';
+import construct from './modules/construct.js';
 // import Swiper bundle with all modules installed
 import Swiper from 'swiper/bundle';
 
@@ -12,6 +13,10 @@ import mixitup from 'mixitup';
 document.addEventListener('DOMContentLoaded', function () {
     header();
     modal();
+
+    try {
+        construct();
+    } catch (error) {console.log('конструктор не работет на данной странице', error);}
     // init Swiper:
     const swiper = new Swiper( '.main-slider', {
 
@@ -33,12 +38,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
-    var mixer = mixitup('.tariff__items', {
-        load: {
-            filter: '.landscaping'
-        },
-    });
+    try { // миксетап для услуг
+        var mixerServicesPage = mixitup('.tariff__items', {
+            load: {
+                filter: '.landscaping'
+            },
+            animation: {
+                enable: false
+            }
+        });
+    } catch (error) {}
 
+    
+    
 
     //Реализация свитчей карточек
     const cardsSwitchInputs = document.querySelectorAll('.tariff__switch-input');

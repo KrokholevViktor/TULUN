@@ -89,8 +89,8 @@ function header() {
 			document.body.style.marginTop = `0px`;
 		} else if (document.documentElement.scrollTop > 400){
 			// обратный скролл
-			headerMain.classList.add('header--fixed');
 			document.body.style.marginTop = `${headerMain.offsetHeight + 40}px`;
+			headerMain.classList.add('header--fixed');
 		};
 
 		lastScrollTop = currentScrollTop;

@@ -20,7 +20,7 @@
         width: 424px;
         background-color: $white-off;
         height: 100vh;
-        padding: 90px 36px;
+        padding: 90px 36px 36px 36px;
         display: flex;
         flex-direction: column;
         transition: all 0.3s ease-in;
@@ -28,9 +28,13 @@
         overflow-x: hidden;
         @media (max-width: 470px) {
 			width: 90%;
+            padding: 67px 20px 20px 20px;
         }
         @media (max-height: 900px) {
-			padding: 36px 36px;
+			padding-top: 36px;
+        }
+        @media (max-width: 480px) {
+			width: 340px;
         }
         .modal__form-title {
             margin: 0;
@@ -64,16 +68,14 @@
         }
     }
     &__form-input--checkbox {
-        margin-right: 10px;
+        margin-right: 5px;
+        
 
     }
     &__radio-container  {
         display: flex;
         column-gap: 15px;
         margin-bottom: 13px;
-        @media (max-width: 470px) {
-			flex-direction: column;
-        }
     }
     &__radio-label {
         &::before {
@@ -85,11 +87,15 @@
             flex-grow: 0;
             border: 1px solid $gray;
             border-radius: 50%;
-            margin-right: 8px;
+            margin-right: 6px;
             background-repeat: no-repeat;
             background-position: center center;
             background-size: 50% 50%;
             transform: translateY(5px);
+        }
+        @media (max-width: 470px) {
+			font-size: 14px;
+            white-space: nowrap;
         }
     }
     &__radio-input {

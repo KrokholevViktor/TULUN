@@ -1,9 +1,13 @@
-.tariff-card {
+.tariff-card { 
     width: 282px;
     // height: 516px;
     border-radius: 10px;
     box-shadow: 0px 10px 20px 0px rgba(130, 143, 169, 0.30);
     transition: all 0.2s ease-in;
+    &:hover {
+       transform: scale(1.02);
+       box-shadow: 0px 10px 20px 0px rgba(130, 143, 169, 0.60);
+    }
     &__header {
         height: 67px;
         border-radius: 10px 10px 0px 0px;
@@ -11,6 +15,7 @@
         padding: 30px 20px 15px 20px;
         opacity: 1;
         margin-bottom: 16px;
+        
     }
     &__title {
         font-size: 26px;
@@ -126,4 +131,72 @@
     .tariff-card__header {
         opacity: 0.8;
     }
+}
+
+
+.tariff-card {
+    position: relative;
+    &__custom-checkbox>input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    /* для элемента label, связанного с .custom-checkbox */
+    &__custom-checkbox>span {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+  
+  /* создание в label псевдоэлемента before со следующими стилями */
+  &__custom-checkbox>span::before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    content: '';
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    // border: 1px solid #adb5bd;
+    background-color: $white;
+    box-shadow: 0px 10px 20px 0px rgba(130, 143, 169, 0.30);
+    border-radius: 100%;
+    background-image: url(../../img/icons/plus-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+  
+  /* стили при наведении курсора на checkbox */
+  &__custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+
+  }
+  
+  /* стили для активного чекбокса (при нажатии на него) */
+  &__custom-checkbox>input:not(:disabled):active+span::before {
+
+  }
+  
+  /* стили для чекбокса, находящегося в фокусе */
+  &__custom-checkbox>input:focus+span::before {
+    box-shadow: 0px 10px 20px 0px rgba(130, 143, 169, 0.30);
+  }
+  
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  &__custom-checkbox>input:focus:not(:checked)+span::before {
+    box-shadow: 0px 10px 20px 0px rgba(130, 143, 169, 0.30);
+  }
+  
+  /* стили для чекбокса, находящегося в состоянии checked */
+  &__custom-checkbox>input:checked+span::before {
+    border-color: $blue;
+    background-color: $blue;
+    background-image: url(../img/icons/card-mark-icon.svg);
+  }
+  
+  /* стили для чекбокса, находящегося в состоянии disabled */
+  &__custom-checkbox>input:disabled+span::before {
+  }
 }

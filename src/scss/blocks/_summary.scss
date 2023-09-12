@@ -1,0 +1,121 @@
+.summary {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 38px;
+        margin-bottom: 95px;
+        @media (max-width: 1050px) {
+            flex-direction: column;
+            row-gap: 38px;
+            align-items: center;
+        }
+    }
+
+    &__list-block {
+        flex-grow: 1;
+        @media (max-width: 1050px) {
+            width: 100%;
+        }
+    }
+    &__title-block {
+        padding: 25px 19px 0px 19px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        &-name, &-price{
+            font-size: 26px;
+            color: $blue;
+            opacity: 0.25;
+            font-weight: 700;
+            @media (max-width: 568px) {
+                font-size: 18px;
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    &__item, &__ot-payment, &__monthly-payment  {
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        border: 1px solid $gray;
+        padding: 25px 20px;
+        align-items: center;
+        @media (max-width: 568px) {
+            height: 51px;
+            padding: 18px 12px;
+        }
+        &-title {
+            font-weight: 700;
+            color: $black;
+            font-size: 22px;
+            @media (max-width: 568px) {
+                font-size: 18px;
+            }
+        }
+        &-price {
+            font-size: 26px;
+            color: $red;
+            font-weight: 700;
+        }
+    }
+    &__total-block {
+        
+        width: 492px;
+        height: 408px;
+        padding: 52px;
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px 0px rgba(130, 143, 169, 0.30);
+        @media (max-width: 568px) {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+    &__total-block-title {
+        text-align: left;
+        color: $blue-hover;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 20px;
+       
+    }
+    &__ot-payment, &__monthly-payment {
+        padding: 25px 19px;
+        font-size: 22px;
+        @media (max-width: 568px) {
+            padding: 18px 15px;
+        }
+    }
+    &__ot-payment{
+        margin-bottom: 20px;
+    }
+    &__monthly-payment {
+        margin-bottom: 30px;
+    }
+    &__ot-payment-price, &__monthly-payment-price {
+        color: $blue;
+        font-size: 36px;
+        font-weight: 600;
+        white-space: nowrap;
+        @media (max-width: 568px) {
+            font-size: 26px;
+        }
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background-color: $blue;
+        padding: 14px 30px;
+        width: 100%;
+        color: $white;
+        font-size: 20px;
+    }
+}

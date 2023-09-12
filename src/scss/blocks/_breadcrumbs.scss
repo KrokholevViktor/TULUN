@@ -1,0 +1,33 @@
+.breadcrumbs {
+    &__list {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    &__link {
+        position: relative;
+        color: $gray;
+        text-decoration: underline;
+        margin-right: 15px;
+        font-size: 18px;
+        &::after {
+            right: -10px;
+            position: absolute;
+            content: "/";
+        }
+    }
+    &__item:last-child {
+        .breadcrumbs__link {
+            font-weight: 700;
+            text-decoration: none;
+        }
+       .breadcrumbs__link::after {
+        content: '';
+       }
+    }
+    &__item:nth-last-child(2) {
+        .breadcrumbs__link::after {
+            font-weight: 700;
+           }
+    }
+}
