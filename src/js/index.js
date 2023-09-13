@@ -39,9 +39,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     try { // миксетап для услуг
-        var mixerServicesPage = mixitup('.tariff__items', {
+        var mixerMainConstruct = mixitup('.tariff__items', {
             load: {
                 filter: '.landscaping'
+            },
+            animation: {
+                enable: false
+            }
+        });
+    } catch (error) {}
+
+    try { // миксетап для услуг
+        var mixerServicesPage = mixitup('.services__items', {
+            load: {
+                filter: '.internet'
             },
             animation: {
                 enable: false

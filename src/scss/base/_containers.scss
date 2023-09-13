@@ -6,8 +6,13 @@
 }
 
 .container--width {
-	
 	max-width: 1272px;
+	margin: 0 auto;
+	padding: 0 18px;
+}
+
+.container--blog {
+	max-width: 812px;
 	margin: 0 auto;
 	padding: 0 18px;
 }

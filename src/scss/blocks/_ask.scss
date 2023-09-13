@@ -41,11 +41,14 @@
         border-radius: 4px;
         padding: 13px 15px;
         color: $black;
-        max-width: 388px;
+        width: 388px;
         &::placeholder {
             color: $gray;
             font-size: 16px;
             line-height: 22px;
+        }
+        @media (max-width: 646px) {
+            width: 298px;
         }
     }
     &__form-button {
