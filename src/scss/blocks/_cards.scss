@@ -21,6 +21,7 @@
         }
     }
     &__item{
+        position: relative;
         display: flex;
         flex-direction: column;
         background-color: $white;
@@ -44,10 +45,34 @@
         font-size: 26px;
         color: $blue-hover;
         margin-bottom: 10px;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -ms-line-clamp: 2;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        display: -webkit-box;
+        display: box;
+        word-wrap: break-word;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
     }
     &__descr {
         font-size: 16px;
         color: $black;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -ms-line-clamp: 5;
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+        display: -webkit-box;
+        display: box;
+        word-wrap: break-word;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
     }
     &__link {
         @include detailsLink;

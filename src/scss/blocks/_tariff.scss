@@ -118,6 +118,10 @@
         .tariff-card {
             display: none;
         }
+        
+    }
+    .tariff__cards-wrapper--page {
+        margin-bottom: 0;
     }
     &__cards-wrapper--active {
         margin-bottom: 80px;
@@ -125,7 +129,7 @@
         opacity: 1;
         pointer-events: all;
         .tariff-card {
-            display: block;
+            display: flex;
         }
     }
 }

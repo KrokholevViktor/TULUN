@@ -7,7 +7,7 @@
     &--mobile {
         flex-direction: column;
     }
-    &--mobile .menu__link {
+    &--mobile li a {
         color: $blue;
         &:hover {
             color: $red;
@@ -16,16 +16,20 @@
     }
     &__item {
         position: relative;
-        padding-bottom: 13px;
+        
         @media (max-width: 998px) {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
+        a {
+            display: block;
+            padding-bottom: 13px;
+        }
     }
     &__item:first-of-type { // стили для первого подменю без ховера (смещение)
-        .menu__sub-menu {
+        .sub-menu {
             @media (max-width: 1200px) {
                 transform: translate(-20%, 5%) ;
                 &::before {
@@ -37,7 +41,7 @@
             }
         }
     }
-    &__link {
+    a {
         color: $white;
         font-size: 24px;
         line-height: normal;
@@ -51,7 +55,7 @@
         }
     }
 
-    &__sub-menu {
+    .sub-menu {
         z-index: 2;
         width: 235px;
         display: flex;
@@ -82,7 +86,7 @@
             transform: translate(-50%, 0%);
             width: 40px;
             height: 52px;
-            background-image: url(../../img/header/menu-triangle.svg);
+            background-image: url(../img/header/menu-triangle.svg);
             background-repeat: no-repeat;
             pointer-events: none;
             @media (max-width: 1200px) {
@@ -109,11 +113,11 @@
         
 
     }
-    &--mobile .menu__item:hover .menu__sub-menu {
+    &--mobile .menu__item:hover .sub-menu {
         display: block;
     }
 
-    &__sub-link {
+    .sub-menu li a {
         font-size: 22px;
         color: $blue;
         text-decoration: none;
@@ -130,7 +134,7 @@
     }
 }
 
-.menu__item:hover > .menu__sub-menu, .menu__item.hover > .menu__sub-menu {
+.menu__item:hover > .sub-menu, .menu__item.hover > .sub-menu {
     opacity: 1;
     pointer-events: all;
     max-height: 300px;
@@ -141,7 +145,7 @@
     }
 }
 
-.menu__item:first-of-type:hover > .menu__sub-menu, .menu__item:first-of-type.hover > .menu__sub-menu {
+.menu__item:first-of-type:hover > .sub-menu, .menu__item:first-of-type.hover > .sub-menu {
     // transform: translate(-50%, 0%);
     @media (max-width: 1200px) {
         transform: translate(-20%, 0%) !important;
@@ -151,7 +155,7 @@
     }
 }
 
-.menu__item.hover > .menu__sub-menu {
+.menu__item.hover > .sub-menu {
     @media (max-width: 998px) {
         filter: unset;
     }

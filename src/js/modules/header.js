@@ -16,6 +16,7 @@ function header() {
 			menuMobile.classList.remove('header__row--mobile');
 			menu.classList.remove('menu--mobile');
 			menuIcon.classList.remove('nav-icon--active');
+			document.body.classList.remove('no-scroll');
 		}
 	})
 

@@ -1,0 +1,110 @@
+
+  .swiper-news {
+    position: relative;
+    .swiper {
+        width: 100%;
+        height: 100%;
+        img {
+          margin-bottom: unset;
+        }
+      }
+    
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // border-radius: 5px;
+      }
+    
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    
+      .swiper {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+      }
+    
+      .swiper-slide {
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+      }
+    
+      .mySwiper2 {
+        height: 420px;
+        width: 100%;
+      }
+    
+        .mySwiper {
+        margin-top: 20px;
+        height: 65px;
+        width: 305px;
+        box-sizing: border-box;
+        padding: 0;
+      }
+    
+      .mySwiper .swiper-slide {
+        width: 65px;
+        height: 65px;
+        opacity: 1;
+        filter: grayscale(1);
+      }
+    
+      .mySwiper .swiper-slide-thumb-active {
+        opacity: 1;
+        filter: grayscale(0);
+      }
+      
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // border-radius: 5px;
+      }
+    
+      .mySwiper .swiper-slide img {
+        display: block;
+        width: 65px;
+        height: 100%;
+        object-fit: cover;
+        // border-radius: 5px;
+        cursor: pointer;
+      }
+  }
+  .swiper-news .swiper-button-prev, .swiper-news .swiper-button-next {
+    width: 29px;
+    height: 29px;
+    background-image: url(../img/icons/swiper-arrow.svg);
+    position: absolute;
+    bottom: 20px;
+    top: unset;
+  }
+  .swiper-news .swiper-button-prev {
+    transform: rotate(180deg) translateX(200px);
+    left: 50%;
+  }
+  .swiper-news .swiper-button-next {
+    transform: translateX(200px);
+    right: 50%;
+  }
+
+  .swiper-news .swiper-button-prev:after, .swiper-news .swiper-button-next:after {
+    content: '';
+    
+  }
+
+  .swiper-news .swiper-button-prev:after {
+    
+  }

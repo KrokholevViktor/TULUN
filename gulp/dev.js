@@ -1,3 +1,5 @@
+// При разработке папка проекта помещается в папку темы, будут генерироваться файлы сборки сразу в папку билд в корне проекта и в папки уровнем выше в корень темы js, css, img, files
+
 const gulp = require('gulp');
 const fileInclude = require('gulp-file-include');
 const sass = require('gulp-sass')(require('sass'));
@@ -58,7 +60,8 @@ gulp.task('sass:dev', function () {
 			.pipe(sassGlob())
 			.pipe(sass())
 			.pipe(sourceMaps.write())
-			.pipe(gulp.dest('./build/css/'))
+			.pipe(gulp.dest('./build/css/'))//в папку билд
+			.pipe(gulp.dest('../css/'))  //в папку темы вордпресс
 	);
 });
 
@@ -67,21 +70,25 @@ gulp.task('images:dev', function () {
 		.src('./src/img/**/*')
 		.pipe(changed('./build/img/'))
 		// .pipe(imagemin({ verbose: true }))
-		.pipe(gulp.dest('./build/img/'));
+		.pipe(gulp.dest('./build/img/'))//в папку билд
+		.pipe(gulp.dest('../img/'));//в папку темы вордпресс
 });
 
 gulp.task('fonts:dev', function () {
 	return gulp
 		.src('./src/fonts/**/*')
 		.pipe(changed('./build/fonts/'))
-		.pipe(gulp.dest('./build/fonts/'));
+		.pipe(gulp.dest('./build/fonts/'))//в папку билд
+		.pipe(gulp.dest('../fonts/'));//в папку темы вордпресс
 });
 
 gulp.task('files:dev', function () {
 	return gulp
 		.src('./src/files/**/*')
 		.pipe(changed('./build/files/'))
-		.pipe(gulp.dest('./build/files/'));
+		.pipe(gulp.dest('./build/files/')) //в папку билд
+		.pipe(gulp.dest('../files/')); //в папку темы вордпресс
+		
 });
 
 
@@ -92,7 +99,8 @@ gulp.task('js:dev', function () {
 		.pipe(plumber(plumberNotify('JS')))
 		// .pipe(babel())
 		.pipe(webpack(require('./../webpack.config.js')))
-		.pipe(gulp.dest('./build/js/'));
+		.pipe(gulp.dest('./build/js/')) //в папку билд
+		.pipe(gulp.dest('../js/')); //в папку темы вордпресс
 });
 
 const serverOptions = {

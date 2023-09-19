@@ -67,19 +67,17 @@
     display: flex;
         justify-content: center;
         column-gap: 30px;
-        width: calc(100% - 36px);
+        width: 100%;
         margin: 0 auto;
         margin-bottom: 20px;
+        justify-content: start;
+        overflow-x: auto;
+        padding-bottom: 15px;
         .mixitup-control-active {
             opacity: 1;
             color: $black;
             text-decoration: solid underline $red 5px;
             text-underline-offset: 8px;
-        }
-        @media (max-width: 741px) {
-            justify-content: start;
-            overflow-x: auto;
-            padding-bottom: 15px;
         }
 }
 
